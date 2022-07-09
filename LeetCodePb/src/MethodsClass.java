@@ -16,12 +16,8 @@ public class MethodsClass {
 
         HashMap<Character, Integer> charsOccurence = new HashMap();
 
-        for(char c : s.toCharArray()) {
+        for(char c : s.toCharArray()) charsOccurence.put(c,charsOccurence.getOrDefault(c,0)+1);
 
-            if (charsOccurence.containsKey(c)) { charsOccurence.replace(c,charsOccurence.get(c)+1); }
-
-            else charsOccurence.put(c,1);
-        }
         System.out.println(charsOccurence.values());
         ArrayList<Integer> listOfValues = new ArrayList<>();
 
